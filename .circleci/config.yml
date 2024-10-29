@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: circleci/python:3.8  # or your preferred Python version
+    steps:
+      - checkout
+      - run:
+#          name: Install dependencies
+ #         command: |
+  #          # If you have any dependencies, install them here
+   #         pip install -r requirements.txt || echo "No requirements file"
+      - run:
+          name: Run Fibonacci tests
+          command: python test_fibonacci.py
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
