@@ -8,5 +8,6 @@ def fib(num):
    else:
        return fib(num-1)+fib(num-2)
    
-n = int(input("Kis number tak ka fibonacci?"))
-print(f"Fibonacci of {n} is:", fib(n))
+if __name__ == "__main__":
+    n = int(input("Kis number tak ka fibonacci?"))
+    print(f"Fibonacci of {n} is:", fib(n))
